@@ -1,8 +1,7 @@
-import pygame
-
 WIDTH, HEIGHT = 600, 600
 RIGHT_GUI = 400
 ROWS, COLS = 8, 8
+ROOMS = 20
 SQUARE_SIZE = WIDTH//ROWS
 
 # colours

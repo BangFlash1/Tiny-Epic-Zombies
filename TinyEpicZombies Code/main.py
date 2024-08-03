@@ -13,8 +13,9 @@ p1 = Player("Lara")
 
 def main():
     run = True
-    game = Game(WIN, ROOMS, PLAYERS)
-    game.graph.addPlayer(p1, game.graph.rooms[0])
-    game.graph.movePlayer(p1, game.graph.rooms[1])
+    game = Game(WIN, ROOMS)
+    game.roomManager.addPlayer(p1, 0)
+    game.graph.addEdge(0, 1, 1)
+    game.roomManager.movePlayer(p1, 1)
 
 main()

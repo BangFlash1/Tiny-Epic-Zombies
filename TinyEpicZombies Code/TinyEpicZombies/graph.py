@@ -1,9 +1,7 @@
 from.constants import ROOMS
 from .player import Player
 
-# The graph is represented by an adjacency matrix. It contains the 
-
-class Graph:
+class Graph: # The graph is represented by an adjacency matrix.
     def __init__(self, numberOfRooms):
         self.adjMatrix = []
         self.create_adjMatrix(numberOfRooms)

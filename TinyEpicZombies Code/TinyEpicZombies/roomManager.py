@@ -1,17 +1,28 @@
 from .room import Room
 from .graph import Graph
+from .zombie import Zombie
+from .player import Player
 from .constants import ROOMS
 
 class RoomManager: #  RoomManager is for the purpose of adding and removing entities from rooms
     def __init__(self, graph: Graph):
         self.rooms = [Room(i) for i in range(ROOMS)]
+        self.players = []
+        self.enemies = []
         self.__graph = graph
 
-    def addPlayer(self, player, roomID):
+    def addZombie(self, roomID, zombie):
+        self.rooms[roomID].enemies.append(Zombie(len(self.enemies)))
+        self.enemies.append(zombie)
+
+    def addPlayer(self, playerName, roomID):
+        self.players.append(Player(playerName))
+        player = self.players[-1]
         player.room = self.rooms[roomID]
         self.rooms[roomID].players.append(player)
 
-    def movePlayer(self, player, newRoom):
+    def movePlayer(self, playerID, newRoom):
+        player = self.players[playerID]
         legalMoves = self.generateMoves(player)
         if newRoom in legalMoves:
             player.room.players.remove(player)

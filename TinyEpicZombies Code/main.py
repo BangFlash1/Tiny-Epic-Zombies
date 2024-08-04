@@ -9,13 +9,11 @@ WIN = None
 PLAYERS = 1
 pygame.display.set_caption("Tiny Epic Zombies")
 
-p1 = Player("Lara")
-
 def main():
     run = True
     game = Game(WIN, ROOMS)
-    game.roomManager.addPlayer(p1, 0)
+    game.roomManager.addPlayer("Lara", 0)
     game.graph.addEdge(0, 1, 1)
-    game.roomManager.movePlayer(p1, 1)
+    game.roomManager.movePlayer(0, 1)
 
 main()

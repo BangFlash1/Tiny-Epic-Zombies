@@ -1,0 +1,27 @@
+Event Cards:
+ - Explosion (2)
+ - Zombie (2)
+
+Backpack Items:
+ - Grenade (3)
+ - Fireworks (2)
+ - Adrenaline (1)
+ - Skateboard (1)
+
+Pickup Items:
+ - Frequency (6)
+ - First Aid (2)
+
+Weapons:
+ - Golf Club (1)
+ - Crowbar (1)
+ - Revolver (1)
+ - Shotgun (1)
+ - Machete (1)
+ - Axe (1)
+ - Chainsaw (1)
+ - Submachine Gun (1)
+ - UZI (1)
+ - Assault Rifle (1)
+ - Crossbow (1)
+ - Barbed Bat (1)

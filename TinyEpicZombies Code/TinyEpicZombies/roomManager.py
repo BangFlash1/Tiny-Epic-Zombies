@@ -1,12 +1,12 @@
 from .room import Room
 from .graph import Graph
-from .zombie import Zombie
 from .player import Player
 from .constants import ROOMS
 
 class RoomManager: #  RoomManager is for the purpose of adding and removing entities from rooms
     def __init__(self, graph: Graph):
         self.rooms = [Room(i) for i in range(ROOMS)]
+<<<<<<< Updated upstream
         self.players = []
         self.enemies = []
         self.__graph = graph
@@ -14,6 +14,13 @@ class RoomManager: #  RoomManager is for the purpose of adding and removing enti
     def addZombie(self, roomID, zombie):
         self.rooms[roomID].enemies.append(Zombie(len(self.enemies)))
         self.enemies.append(zombie)
+=======
+        self.players = {}
+        self.enemies = []
+        self.__graph = graph
+
+# addPlayer/addZombie: Adds each player/zombie to a dictionary with the keys being consecutive numbers starting at 0 and the values being the player objects.
+>>>>>>> Stashed changes
 
     def addPlayer(self, playerName, roomID):
         self.players.append(Player(playerName))
